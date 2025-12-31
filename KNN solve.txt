@@ -1,0 +1,150 @@
+Step 1: Identify the features and distance metric
+Features used for comparison:
+
+Gender (F/M): Categorical feature.
+Height: Numerical feature.
+Since "Gender" is categorical and identical (Pat is F), we will not calculate its distance as it doesn’t differ in this case.
+
+Use the Euclidean Distance formula for numerical features:
+
+d=∣Height of Pat−Height of another person∣
+For each record, calculate the absolute difference in height.
+
+Step 2: Calculate distances
+
+1. Kristina
+
+Height: 1.6 m
+Distance from Pat: ∣1.6−1.6∣=0.0
+Output: Short
+
+2. Jim
+
+Height: 2.0 m
+Distance from Pat: ∣1.6−2.0∣=0.4
+Output: Tall
+
+3. Maggie
+
+Height: 1.9 m
+Distance from Pat: ∣1.6−1.9∣=0.3
+Output: Medium
+
+4. Martha
+
+Height: 1.88 m
+Distance from Pat: ∣1.6−1.88∣=0.28
+Output: Medium
+
+5. Stephanie
+
+Height: 1.7 m
+Distance from Pat: ∣1.6−1.7∣=0.1
+Output: Short
+
+6. Bob
+
+Height: 1.85 m
+Distance from Pat: ∣1.6−1.85∣=0.25
+Output: Medium
+
+7. Kathy
+
+Height: 1.6 m
+Distance from Pat: ∣1.6−1.6∣=0.0
+Output: Short
+
+8. Dave
+
+Height: 1.7 m
+Distance from Pat: ∣1.6−1.7∣=0.1
+Output: Short
+
+9. Worth
+
+Height: 2.2 m
+Distance from Pat: ∣1.6−2.2∣=0.6
+Output: Tall
+
+10. Steven
+
+Height: 2.1 m
+Distance from Pat: ∣1.6−2.1∣=0.5
+Output: Tall
+
+11. Debbie
+
+Height: 1.8 m
+Distance from Pat: ∣1.6−1.8∣=0.2
+Output: Medium
+
+12. Todd
+
+Height: 1.95 m
+Distance from Pat: ∣1.6−1.95∣=0.35
+Output: Medium
+
+13. Kim
+
+Height: 1.9 m
+Distance from Pat: ∣1.6−1.9∣=0.3
+Output: Medium
+
+14. Amy
+
+Height: 1.8 m
+Distance from Pat: ∣1.6−1.8∣=0.2
+Output: Medium
+
+15. Wynette
+
+Height: 1.75 m
+Distance from Pat: ∣1.6−1.75∣=0.15
+Output: Medium
+
+Step 3: Select the nearest k=5 neighbors
+
+1. Kristina
+
+Gender: Female
+Height: 1.6 m
+Distance from Pat: 0.0
+Output: Short
+
+2. Kathy
+
+Gender: Female
+Height: 1.6 m
+Distance from Pat: 0.0
+Output: Short
+
+3. Stephanie
+
+Gender: Female
+Height: 1.7 m
+Distance from Pat: 0.1
+Output: Short
+
+4. Dave
+
+Gender: Male
+Height: 1.7 m
+Distance from Pat: 0.1
+Output: Short
+
+5. Wynette
+
+Gender: Female
+Height: 1.75 m
+Distance from Pat: 0.15
+Output: Medium
+
+Step 4: Classify based on the majority class
+From the 5 nearest neighbors:
+
+Short: 4 neighbors (Kristina, Kathy, Stephanie, Dave)
+Medium: 1 neighbor (Wynette)
+The majority class is Short.
+
+Final Classification
+The instance (Pat, F, 1.6) is classified as Short.
